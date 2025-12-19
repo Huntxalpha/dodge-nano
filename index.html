@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Dodge Nano</title>
+  <!-- Empêche le zoom sur mobile et améliore la compatibilité iPhone -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="description" content="Dodge Nano - évitez les obstacles dans ce mini-jeu HTML5 instantané." />
+  <meta property="og:title" content="Dodge Nano" />
+  <meta property="og:description" content="Dodge Nano – un mini jeu addictif. Jouez instantanément sans téléchargement." />
+  <!-- Image Open Graph provenant de Unsplash pour la prévisualisation Twitter -->
+  <meta property="og:image" content="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?fit=crop&w=600&q=80" />
+  <meta property="og:url" content="https://huntxalpha.github.io/dodge-nano/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-container">
+    <!-- Barre de score -->
+    <div id="scoreboard">
+      Score : <span id="score">0</span>&nbsp;&nbsp;Vies : <span id="lives">3</span>
+    </div>
+    <!-- Canvas du jeu -->
+    <canvas id="game-canvas" width="320" height="480"></canvas>
+
+    <!-- Overlay de démarrage -->
+    <div id="start-overlay" class="overlay">
+      <h2>Dodge Nano</h2>
+      <p>Déplacez‑vous de gauche à droite pour éviter les obstacles qui tombent. Plus vous survivez, plus la difficulté augmente !</p>
+      <button id="start-button">Démarrer</button>
+    </div>
+
+    <!-- Overlay de fin de partie -->
+    <div id="end-overlay" class="overlay" style="display: none;">
+      <h2>Partie terminée !</h2>
+      <p>Votre score : <span id="final-score">0</span></p>
+      <button id="restart-button">Rejouer</button>
+      <button id="share-button">Partager mon score</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
